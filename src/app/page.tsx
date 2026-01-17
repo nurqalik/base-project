@@ -6,7 +6,7 @@ import { LatestPost } from "@/app/_components/post";
 import { auth } from "@/server/better-auth";
 import { getSession } from "@/server/better-auth/server";
 import { api, HydrateClient } from "@/trpc/server";
-import { Role } from "generated/prisma";
+import { role } from "generated/prisma";
 import Image from "next/image";
 
 export default async function Home() {
@@ -103,7 +103,7 @@ export default async function Home() {
             </div>
           </div>
 
-          {session?.user?.role === Role.ADMIN && <LatestPost />}
+          {session?.user?.role === role.ADMIN && <LatestPost />}
         </div>
       </main>
     </HydrateClient>

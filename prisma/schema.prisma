@@ -39,7 +39,7 @@ model User {
   accounts      Account[]
   posts         Post[]
 
-  role       Role @default(USER)
+  role       role @default(USER)
   banned     Boolean?  @default(false)
   banReason  String?
   banExpires DateTime?
@@ -98,7 +98,7 @@ model Verification {
   @@index([identifier])
 }
 
-enum Role {
+enum role {
     ADMIN
     USER
 }

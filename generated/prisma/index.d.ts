@@ -43,18 +43,18 @@ export type Verification = $Result.DefaultSelection<Prisma.$VerificationPayload>
  * Enums
  */
 export namespace $Enums {
-  export const Role: {
+  export const role: {
   ADMIN: 'ADMIN',
   USER: 'USER'
 };
 
-export type Role = (typeof Role)[keyof typeof Role]
+export type role = (typeof role)[keyof typeof role]
 
 }
 
-export type Role = $Enums.Role
+export type role = $Enums.role
 
-export const Role: typeof $Enums.Role
+export const role: typeof $Enums.role
 
 /**
  * ##  Prisma Client ʲˢ
@@ -2366,7 +2366,7 @@ export namespace Prisma {
     image: string | null
     createdAt: Date | null
     updatedAt: Date | null
-    role: $Enums.Role | null
+    role: $Enums.role | null
     banned: boolean | null
     banReason: string | null
     banExpires: Date | null
@@ -2380,7 +2380,7 @@ export namespace Prisma {
     image: string | null
     createdAt: Date | null
     updatedAt: Date | null
-    role: $Enums.Role | null
+    role: $Enums.role | null
     banned: boolean | null
     banReason: string | null
     banExpires: Date | null
@@ -2525,7 +2525,7 @@ export namespace Prisma {
     image: string | null
     createdAt: Date
     updatedAt: Date
-    role: $Enums.Role
+    role: $Enums.role
     banned: boolean | null
     banReason: string | null
     banExpires: Date | null
@@ -2633,7 +2633,7 @@ export namespace Prisma {
       image: string | null
       createdAt: Date
       updatedAt: Date
-      role: $Enums.Role
+      role: $Enums.role
       banned: boolean | null
       banReason: string | null
       banExpires: Date | null
@@ -3070,7 +3070,7 @@ export namespace Prisma {
     readonly image: FieldRef<"User", 'String'>
     readonly createdAt: FieldRef<"User", 'DateTime'>
     readonly updatedAt: FieldRef<"User", 'DateTime'>
-    readonly role: FieldRef<"User", 'Role'>
+    readonly role: FieldRef<"User", 'role'>
     readonly banned: FieldRef<"User", 'Boolean'>
     readonly banReason: FieldRef<"User", 'String'>
     readonly banExpires: FieldRef<"User", 'DateTime'>
@@ -6985,16 +6985,16 @@ export namespace Prisma {
 
 
   /**
-   * Reference to a field of type 'Role'
+   * Reference to a field of type 'role'
    */
-  export type EnumRoleFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Role'>
+  export type EnumroleFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'role'>
     
 
 
   /**
-   * Reference to a field of type 'Role[]'
+   * Reference to a field of type 'role[]'
    */
-  export type ListEnumRoleFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Role[]'>
+  export type ListEnumroleFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'role[]'>
     
 
 
@@ -7081,7 +7081,7 @@ export namespace Prisma {
     image?: StringNullableFilter<"User"> | string | null
     createdAt?: DateTimeFilter<"User"> | Date | string
     updatedAt?: DateTimeFilter<"User"> | Date | string
-    role?: EnumRoleFilter<"User"> | $Enums.Role
+    role?: EnumroleFilter<"User"> | $Enums.role
     banned?: BoolNullableFilter<"User"> | boolean | null
     banReason?: StringNullableFilter<"User"> | string | null
     banExpires?: DateTimeNullableFilter<"User"> | Date | string | null
@@ -7118,7 +7118,7 @@ export namespace Prisma {
     image?: StringNullableFilter<"User"> | string | null
     createdAt?: DateTimeFilter<"User"> | Date | string
     updatedAt?: DateTimeFilter<"User"> | Date | string
-    role?: EnumRoleFilter<"User"> | $Enums.Role
+    role?: EnumroleFilter<"User"> | $Enums.role
     banned?: BoolNullableFilter<"User"> | boolean | null
     banReason?: StringNullableFilter<"User"> | string | null
     banExpires?: DateTimeNullableFilter<"User"> | Date | string | null
@@ -7155,7 +7155,7 @@ export namespace Prisma {
     image?: StringNullableWithAggregatesFilter<"User"> | string | null
     createdAt?: DateTimeWithAggregatesFilter<"User"> | Date | string
     updatedAt?: DateTimeWithAggregatesFilter<"User"> | Date | string
-    role?: EnumRoleWithAggregatesFilter<"User"> | $Enums.Role
+    role?: EnumroleWithAggregatesFilter<"User"> | $Enums.role
     banned?: BoolNullableWithAggregatesFilter<"User"> | boolean | null
     banReason?: StringNullableWithAggregatesFilter<"User"> | string | null
     banExpires?: DateTimeNullableWithAggregatesFilter<"User"> | Date | string | null
@@ -7451,7 +7451,7 @@ export namespace Prisma {
     image?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
-    role?: $Enums.Role
+    role?: $Enums.role
     banned?: boolean | null
     banReason?: string | null
     banExpires?: Date | string | null
@@ -7468,7 +7468,7 @@ export namespace Prisma {
     image?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
-    role?: $Enums.Role
+    role?: $Enums.role
     banned?: boolean | null
     banReason?: string | null
     banExpires?: Date | string | null
@@ -7485,7 +7485,7 @@ export namespace Prisma {
     image?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
+    role?: EnumroleFieldUpdateOperationsInput | $Enums.role
     banned?: NullableBoolFieldUpdateOperationsInput | boolean | null
     banReason?: NullableStringFieldUpdateOperationsInput | string | null
     banExpires?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
@@ -7502,7 +7502,7 @@ export namespace Prisma {
     image?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
+    role?: EnumroleFieldUpdateOperationsInput | $Enums.role
     banned?: NullableBoolFieldUpdateOperationsInput | boolean | null
     banReason?: NullableStringFieldUpdateOperationsInput | string | null
     banExpires?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
@@ -7519,7 +7519,7 @@ export namespace Prisma {
     image?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
-    role?: $Enums.Role
+    role?: $Enums.role
     banned?: boolean | null
     banReason?: string | null
     banExpires?: Date | string | null
@@ -7533,7 +7533,7 @@ export namespace Prisma {
     image?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
+    role?: EnumroleFieldUpdateOperationsInput | $Enums.role
     banned?: NullableBoolFieldUpdateOperationsInput | boolean | null
     banReason?: NullableStringFieldUpdateOperationsInput | string | null
     banExpires?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
@@ -7547,7 +7547,7 @@ export namespace Prisma {
     image?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
+    role?: EnumroleFieldUpdateOperationsInput | $Enums.role
     banned?: NullableBoolFieldUpdateOperationsInput | boolean | null
     banReason?: NullableStringFieldUpdateOperationsInput | string | null
     banExpires?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
@@ -7917,11 +7917,11 @@ export namespace Prisma {
     not?: NestedStringNullableFilter<$PrismaModel> | string | null
   }
 
-  export type EnumRoleFilter<$PrismaModel = never> = {
-    equals?: $Enums.Role | EnumRoleFieldRefInput<$PrismaModel>
-    in?: $Enums.Role[] | ListEnumRoleFieldRefInput<$PrismaModel>
-    notIn?: $Enums.Role[] | ListEnumRoleFieldRefInput<$PrismaModel>
-    not?: NestedEnumRoleFilter<$PrismaModel> | $Enums.Role
+  export type EnumroleFilter<$PrismaModel = never> = {
+    equals?: $Enums.role | EnumroleFieldRefInput<$PrismaModel>
+    in?: $Enums.role[] | ListEnumroleFieldRefInput<$PrismaModel>
+    notIn?: $Enums.role[] | ListEnumroleFieldRefInput<$PrismaModel>
+    not?: NestedEnumroleFilter<$PrismaModel> | $Enums.role
   }
 
   export type BoolNullableFilter<$PrismaModel = never> = {
@@ -8043,14 +8043,14 @@ export namespace Prisma {
     _max?: NestedStringNullableFilter<$PrismaModel>
   }
 
-  export type EnumRoleWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: $Enums.Role | EnumRoleFieldRefInput<$PrismaModel>
-    in?: $Enums.Role[] | ListEnumRoleFieldRefInput<$PrismaModel>
-    notIn?: $Enums.Role[] | ListEnumRoleFieldRefInput<$PrismaModel>
-    not?: NestedEnumRoleWithAggregatesFilter<$PrismaModel> | $Enums.Role
+  export type EnumroleWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: $Enums.role | EnumroleFieldRefInput<$PrismaModel>
+    in?: $Enums.role[] | ListEnumroleFieldRefInput<$PrismaModel>
+    notIn?: $Enums.role[] | ListEnumroleFieldRefInput<$PrismaModel>
+    not?: NestedEnumroleWithAggregatesFilter<$PrismaModel> | $Enums.role
     _count?: NestedIntFilter<$PrismaModel>
-    _min?: NestedEnumRoleFilter<$PrismaModel>
-    _max?: NestedEnumRoleFilter<$PrismaModel>
+    _min?: NestedEnumroleFilter<$PrismaModel>
+    _max?: NestedEnumroleFilter<$PrismaModel>
   }
 
   export type BoolNullableWithAggregatesFilter<$PrismaModel = never> = {
@@ -8258,8 +8258,8 @@ export namespace Prisma {
     set?: string | null
   }
 
-  export type EnumRoleFieldUpdateOperationsInput = {
-    set?: $Enums.Role
+  export type EnumroleFieldUpdateOperationsInput = {
+    set?: $Enums.role
   }
 
   export type NullableBoolFieldUpdateOperationsInput = {
@@ -8468,11 +8468,11 @@ export namespace Prisma {
     not?: NestedStringNullableFilter<$PrismaModel> | string | null
   }
 
-  export type NestedEnumRoleFilter<$PrismaModel = never> = {
-    equals?: $Enums.Role | EnumRoleFieldRefInput<$PrismaModel>
-    in?: $Enums.Role[] | ListEnumRoleFieldRefInput<$PrismaModel>
-    notIn?: $Enums.Role[] | ListEnumRoleFieldRefInput<$PrismaModel>
-    not?: NestedEnumRoleFilter<$PrismaModel> | $Enums.Role
+  export type NestedEnumroleFilter<$PrismaModel = never> = {
+    equals?: $Enums.role | EnumroleFieldRefInput<$PrismaModel>
+    in?: $Enums.role[] | ListEnumroleFieldRefInput<$PrismaModel>
+    notIn?: $Enums.role[] | ListEnumroleFieldRefInput<$PrismaModel>
+    not?: NestedEnumroleFilter<$PrismaModel> | $Enums.role
   }
 
   export type NestedBoolNullableFilter<$PrismaModel = never> = {
@@ -8527,14 +8527,14 @@ export namespace Prisma {
     not?: NestedIntNullableFilter<$PrismaModel> | number | null
   }
 
-  export type NestedEnumRoleWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: $Enums.Role | EnumRoleFieldRefInput<$PrismaModel>
-    in?: $Enums.Role[] | ListEnumRoleFieldRefInput<$PrismaModel>
-    notIn?: $Enums.Role[] | ListEnumRoleFieldRefInput<$PrismaModel>
-    not?: NestedEnumRoleWithAggregatesFilter<$PrismaModel> | $Enums.Role
+  export type NestedEnumroleWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: $Enums.role | EnumroleFieldRefInput<$PrismaModel>
+    in?: $Enums.role[] | ListEnumroleFieldRefInput<$PrismaModel>
+    notIn?: $Enums.role[] | ListEnumroleFieldRefInput<$PrismaModel>
+    not?: NestedEnumroleWithAggregatesFilter<$PrismaModel> | $Enums.role
     _count?: NestedIntFilter<$PrismaModel>
-    _min?: NestedEnumRoleFilter<$PrismaModel>
-    _max?: NestedEnumRoleFilter<$PrismaModel>
+    _min?: NestedEnumroleFilter<$PrismaModel>
+    _max?: NestedEnumroleFilter<$PrismaModel>
   }
 
   export type NestedBoolNullableWithAggregatesFilter<$PrismaModel = never> = {
@@ -8567,7 +8567,7 @@ export namespace Prisma {
     image?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
-    role?: $Enums.Role
+    role?: $Enums.role
     banned?: boolean | null
     banReason?: string | null
     banExpires?: Date | string | null
@@ -8583,7 +8583,7 @@ export namespace Prisma {
     image?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
-    role?: $Enums.Role
+    role?: $Enums.role
     banned?: boolean | null
     banReason?: string | null
     banExpires?: Date | string | null
@@ -8615,7 +8615,7 @@ export namespace Prisma {
     image?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
+    role?: EnumroleFieldUpdateOperationsInput | $Enums.role
     banned?: NullableBoolFieldUpdateOperationsInput | boolean | null
     banReason?: NullableStringFieldUpdateOperationsInput | string | null
     banExpires?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
@@ -8631,7 +8631,7 @@ export namespace Prisma {
     image?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
+    role?: EnumroleFieldUpdateOperationsInput | $Enums.role
     banned?: NullableBoolFieldUpdateOperationsInput | boolean | null
     banReason?: NullableStringFieldUpdateOperationsInput | string | null
     banExpires?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
@@ -8836,7 +8836,7 @@ export namespace Prisma {
     image?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
-    role?: $Enums.Role
+    role?: $Enums.role
     banned?: boolean | null
     banReason?: string | null
     banExpires?: Date | string | null
@@ -8852,7 +8852,7 @@ export namespace Prisma {
     image?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
-    role?: $Enums.Role
+    role?: $Enums.role
     banned?: boolean | null
     banReason?: string | null
     banExpires?: Date | string | null
@@ -8884,7 +8884,7 @@ export namespace Prisma {
     image?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
+    role?: EnumroleFieldUpdateOperationsInput | $Enums.role
     banned?: NullableBoolFieldUpdateOperationsInput | boolean | null
     banReason?: NullableStringFieldUpdateOperationsInput | string | null
     banExpires?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
@@ -8900,7 +8900,7 @@ export namespace Prisma {
     image?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
+    role?: EnumroleFieldUpdateOperationsInput | $Enums.role
     banned?: NullableBoolFieldUpdateOperationsInput | boolean | null
     banReason?: NullableStringFieldUpdateOperationsInput | string | null
     banExpires?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
@@ -8916,7 +8916,7 @@ export namespace Prisma {
     image?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
-    role?: $Enums.Role
+    role?: $Enums.role
     banned?: boolean | null
     banReason?: string | null
     banExpires?: Date | string | null
@@ -8932,7 +8932,7 @@ export namespace Prisma {
     image?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
-    role?: $Enums.Role
+    role?: $Enums.role
     banned?: boolean | null
     banReason?: string | null
     banExpires?: Date | string | null
@@ -8964,7 +8964,7 @@ export namespace Prisma {
     image?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
+    role?: EnumroleFieldUpdateOperationsInput | $Enums.role
     banned?: NullableBoolFieldUpdateOperationsInput | boolean | null
     banReason?: NullableStringFieldUpdateOperationsInput | string | null
     banExpires?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
@@ -8980,7 +8980,7 @@ export namespace Prisma {
     image?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
+    role?: EnumroleFieldUpdateOperationsInput | $Enums.role
     banned?: NullableBoolFieldUpdateOperationsInput | boolean | null
     banReason?: NullableStringFieldUpdateOperationsInput | string | null
     banExpires?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null

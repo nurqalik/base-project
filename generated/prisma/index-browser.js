@@ -194,7 +194,7 @@ exports.Prisma.NullsOrder = {
   first: 'first',
   last: 'last'
 };
-exports.Role = exports.$Enums.Role = {
+exports.role = exports.$Enums.role = {
   ADMIN: 'ADMIN',
   USER: 'USER'
 };

@@ -18,6 +18,31 @@ export const auth = betterAuth({
   database: prismaAdapter(db, {
     provider: "postgresql", // or "sqlite" or "mysql"
   }),
+  databaseHooks: {
+    user: {
+      create: {
+        before: async (user) => {
+          // Transform role from lowercase string to enum value
+          if (user.role && typeof user.role === "string") {
+            const roleUpper = user.role.toUpperCase();
+            // Only transform if it's a valid enum value
+            if (roleUpper === "USER" || roleUpper === "ADMIN") {
+              return {
+                data: {
+                  ...user,
+                  role: roleUpper,
+                },
+              };
+            }
+            // If invalid, remove role and let Prisma default handle it
+            const { role, ...rest } = user;
+            return { data: rest };
+          }
+          return { data: user };
+        },
+      },
+    },
+  },
   emailAndPassword: {
     enabled: true,
   },
