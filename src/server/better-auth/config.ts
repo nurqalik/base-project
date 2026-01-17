@@ -3,11 +3,16 @@ import { prismaAdapter } from "better-auth/adapters/prisma";
 
 import { env } from "@/env";
 import { db } from "@/server/db";
-import { admin } from "better-auth/plugins";
+import { admin, oAuthProxy } from "better-auth/plugins";
+import { nextCookies } from "better-auth/next-js";
 
 export const auth = betterAuth({
   plugins: [
-    admin()
+    admin(),
+    oAuthProxy({
+      productionURL: `${env.BETTER_AUTH_URL}`
+    }),
+    nextCookies()
   ],
   baseURL: env.BETTER_AUTH_URL,
   database: prismaAdapter(db, {
