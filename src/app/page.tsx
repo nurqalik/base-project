@@ -7,7 +7,8 @@ import { auth } from "@/server/better-auth";
 import { getSession } from "@/server/better-auth/server";
 import { api, HydrateClient } from "@/trpc/server";
 import { role } from "generated/prisma";
-import Image from "next/image";
+import GoogleButton from "@/components/googleButton";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 export default async function Home() {
   const hello = await api.post.hello({ text: "from tRPC" });
@@ -49,12 +50,12 @@ export default async function Home() {
             </Link>
           </div>
           <div className="flex flex-col items-center gap-2">
-            <Image
-              alt="avatar"
-              src={session?.user?.image ?? ''}
-              height={1000}
-              width={1000}
-              className="h-40 w-40 rounded-full" />
+            {session?.user?.image && (
+              <Avatar className="w-12 h-12 rounded-full">
+                <AvatarImage src={session.user.image} />
+                <AvatarFallback>{session.user.name.slice(0,2)}</AvatarFallback>
+              </Avatar>
+            )}
             <p className="text-2xl text-white">
               {hello ? hello.greeting : "Loading tRPC query..."}
             </p>
@@ -64,26 +65,7 @@ export default async function Home() {
                 {session && <span>Logged in as {session.user?.name}</span>}
               </p>
               {!session ? (
-                <form>
-                  <button
-                    className="rounded-full bg-white/10 px-10 py-3 font-semibold no-underline transition hover:bg-white/20"
-                    formAction={async () => {
-                      "use server";
-                      const res = await auth.api.signInSocial({
-                        body: {
-                          provider: "google",
-                          callbackURL: "/",
-                        },
-                      });
-                      if (!res.url) {
-                        throw new Error("No URL returned from signInSocial");
-                      }
-                      redirect(res.url);
-                    }}
-                  >
-                    Sign in with Google
-                  </button>
-                </form>
+                <GoogleButton />
               ) : (
                 <form>
                   <button
